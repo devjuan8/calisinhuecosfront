@@ -1,0 +1,234 @@
+.profile-page {
+  padding: 40px 20px;
+  min-height: calc(100vh - 75px);
+  background: linear-gradient(to bottom, #f8f9fa, white);
+}
+
+.profile-page h1 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  background: linear-gradient(135deg, #007bff 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.profile-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.profile-card,
+.profile-stats {
+  background: white;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e9ecef;
+}
+
+.profile-card h2,
+.profile-stats h3 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.info-item label {
+  font-weight: 600;
+  color: #666;
+  font-size: 14px;
+}
+
+.info-item span {
+  color: #333;
+  font-size: 16px;
+}
+
+.stats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 5px;
+}
+
+.profile-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.profile-section {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.reports-list,
+.donations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.report-item,
+.donation-item {
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.report-item {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.report-item h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.report-location {
+  color: #666;
+  font-size: 14px;
+}
+
+.donation-item h4 {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+}
+
+.donation-date {
+  color: #666;
+  font-size: 12px;
+  margin: 0;
+}
+
+.donation-amount {
+  font-weight: bold;
+  color: #28a745;
+  font-size: 18px;
+}
+
+.btn-sm {
+  padding: 5px 15px;
+  font-size: 14px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.empty-illustration {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 25px;
+}
+
+.empty-state h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.empty-state p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.profile-welcome {
+  margin-top: 20px;
+}
+
+.profile-welcome-img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  opacity: 0.7;
+}
+
+@media (max-width: 968px) {
+  .profile-page {
+    padding: 30px 15px;
+  }
+  
+  .profile-content,
+  .profile-sections {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .profile-card,
+  .profile-stats {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-page {
+    padding: 20px 10px;
+  }
+  
+  .profile-page h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .profile-card,
+  .profile-stats,
+  .profile-section {
+    padding: 20px;
+  }
+  
+  .profile-card h2,
+  .profile-section h2 {
+    font-size: 20px;
+  }
+  
+  .info-item label {
+    font-size: 13px;
+  }
+  
+  .info-item span {
+    font-size: 15px;
+  }
+  
+  .stat-item {
+    padding: 12px;
+  }
+}
+

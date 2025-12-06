@@ -1,0 +1,237 @@
+.create-report-page {
+  padding: 40px 20px;
+  min-height: calc(100vh - 75px);
+  background: linear-gradient(to bottom, #f8f9fa, white);
+}
+
+.create-report-header {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 40px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.create-report-header-content h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #007bff 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
+.create-report-header-content p {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.create-report-header-image {
+  text-align: center;
+}
+
+.create-report-header-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.create-report-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e9ecef;
+}
+
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.location-inputs {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.location-inputs input {
+  flex: 1;
+}
+
+.location-inputs button {
+  white-space: nowrap;
+}
+
+.form-group small {
+  display: block;
+  margin-top: 5px;
+  color: #666;
+  font-size: 12px;
+}
+
+.file-input {
+  width: 100%;
+  padding: 10px;
+  border: 2px dashed #007bff;
+  border-radius: 8px;
+  background: #f8f9fa;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.file-input:hover:not(:disabled) {
+  border-color: #0056b3;
+  background: #e7f3ff;
+}
+
+.file-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.image-previews {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.image-preview-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 1;
+}
+
+.image-preview-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.remove-image-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(220, 53, 69, 0.9);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.remove-image-btn:hover {
+  background: rgba(220, 53, 69, 1);
+  transform: scale(1.1);
+}
+
+.form-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.form-actions button {
+  flex: 1;
+}
+
+@media (max-width: 968px) {
+  .create-report-header {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .create-report-header-image {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .create-report-page {
+    padding: 20px 10px;
+  }
+  
+  .create-report-header {
+    padding: 25px 20px;
+    gap: 30px;
+  }
+  
+  .create-report-header-content h1 {
+    font-size: 32px;
+  }
+  
+  .create-report-card {
+    padding: 25px 20px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .location-inputs {
+    flex-direction: column;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .create-report-page {
+    padding: 15px 10px;
+  }
+  
+  .create-report-header {
+    padding: 20px 15px;
+    gap: 20px;
+  }
+  
+  .create-report-header-content h1 {
+    font-size: 24px;
+  }
+  
+  .create-report-header-content p {
+    font-size: 14px;
+  }
+  
+  .create-report-card {
+    padding: 20px 15px;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+  }
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 16px; /* Evita zoom en iOS */
+    padding: 10px 12px;
+  }
+}
+

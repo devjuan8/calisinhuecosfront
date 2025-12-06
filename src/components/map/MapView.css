@@ -1,0 +1,51 @@
+.map-container {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.map-popup {
+  min-width: 200px;
+}
+
+.map-popup h4 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.map-popup p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-popup {
+    min-width: 150px;
+  }
+  
+  .map-popup h4 {
+    font-size: 14px;
+  }
+  
+  .map-popup p {
+    font-size: 12px;
+  }
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 12px;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+

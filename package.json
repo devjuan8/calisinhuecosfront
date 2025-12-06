@@ -1,0 +1,26 @@
+{
+  "name": "cali-sin-huecos-web",
+  "version": "1.0.0",
+  "description": "Frontend para reporte y financiación de reparación de huecos en Cali",
+  "private": true,
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.1",
+    "axios": "^1.6.2",
+    "react-leaflet": "^4.2.1",
+    "leaflet": "^1.9.4",
+    "@react-leaflet/core": "^2.1.0",
+    "sweetalert2": "^11.10.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.8"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  }
+}
+

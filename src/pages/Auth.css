@@ -1,0 +1,192 @@
+.auth-container {
+  min-height: calc(100vh - 75px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+/* Estilos específicos para Register */
+.register-form {
+  width: 100%;
+}
+
+.register-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.register-form .btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+
+@media (max-width: 968px) {
+  .register-form-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .register-form-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+.auth-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.auth-illustration {
+  text-align: center;
+}
+
+.auth-illustration img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.auth-card {
+  background: white;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Ajustar ancho del card para formulario de registro */
+.auth-card.register-card {
+  max-width: 800px;
+}
+
+.auth-card .register-form {
+  max-width: 100%;
+}
+
+.auth-card .register-form-grid {
+  max-width: 100%;
+}
+
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #007bff 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.auth-link {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+}
+
+.auth-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.auth-link a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 968px) {
+  .auth-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .auth-illustration {
+    order: -1;
+  }
+  
+  .auth-illustration img {
+    max-width: 300px;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .auth-container {
+    padding: 20px 15px;
+  }
+  
+  .auth-card {
+    padding: 30px 20px;
+    max-width: 100%;
+  }
+  
+  .auth-card h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 15px 10px;
+  }
+  
+  .auth-card {
+    padding: 25px 18px;
+  }
+  
+  .auth-card h2 {
+    font-size: 22px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  
+  .form-group input {
+    font-size: 16px; /* Evita zoom en iOS */
+    padding: 10px 12px;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
