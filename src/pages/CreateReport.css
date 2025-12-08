@@ -1,7 +1,25 @@
 .create-report-page {
   padding: 40px 20px;
   min-height: calc(100vh - 75px);
-  background: linear-gradient(to bottom, #f8f9fa, white);
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 50%, #ffffff 100%);
+  position: relative;
+}
+
+.create-report-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #764ba2, #007bff);
+  background-size: 200% 100%;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
 .create-report-header {
@@ -12,9 +30,22 @@
   gap: 40px;
   align-items: center;
   padding: 40px;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.1);
+  border: 1px solid rgba(0, 123, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.create-report-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #764ba2);
 }
 
 .create-report-header-content h1 {
@@ -46,11 +77,23 @@
 .create-report-card {
   max-width: 800px;
   margin: 0 auto;
-  background: white;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
   padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-  border: 1px solid #e9ecef;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.1);
+  border: 1px solid rgba(0, 123, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.create-report-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #764ba2);
 }
 
 
@@ -83,18 +126,22 @@
 
 .file-input {
   width: 100%;
-  padding: 10px;
-  border: 2px dashed #007bff;
-  border-radius: 8px;
-  background: #f8f9fa;
+  padding: 12px 15px;
+  border: 3px dashed rgba(0, 123, 255, 0.4);
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 14px;
+  font-weight: 500;
+  color: #495057;
 }
 
 .file-input:hover:not(:disabled) {
-  border-color: #0056b3;
-  background: #e7f3ff;
+  border-color: #007bff;
+  background: linear-gradient(135deg, #e7f3ff 0%, #f0f8ff 100%);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.15);
+  transform: translateY(-2px);
 }
 
 .file-input:disabled {
@@ -111,10 +158,17 @@
 
 .image-preview-item {
   position: relative;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.2);
   aspect-ratio: 1;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+}
+
+.image-preview-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 123, 255, 0.3);
 }
 
 .image-preview-item img {

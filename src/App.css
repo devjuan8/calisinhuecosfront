@@ -48,69 +48,157 @@
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  background: linear-gradient(135deg, #007bff 0%, #764ba2 100%);
   color: white;
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.35);
   border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+  background: linear-gradient(135deg, #0056b3 0%, #5a3d7a 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 123, 255, 0.5);
 }
 
 .btn-secondary {
-  background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+  background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
   color: white;
-  box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+  box-shadow: 0 6px 20px rgba(108, 117, 125, 0.3);
   border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-secondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-secondary:hover::before {
+  left: 100%;
 }
 
 .btn-secondary:hover {
-  background: linear-gradient(135deg, #5a6268 0%, #545b62 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
+  background: linear-gradient(135deg, #5a6268 0%, #343a40 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(108, 117, 125, 0.4);
 }
 
 .btn-success {
   background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
   color: white;
-  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.35);
   border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-success::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-success:hover::before {
+  left: 100%;
 }
 
 .btn-success:hover {
-  background: linear-gradient(135deg, #218838 0%, #1e7e34 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+  background: linear-gradient(135deg, #218838 0%, #1aa179 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(40, 167, 69, 0.5);
 }
 
 .btn-danger {
   background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
   color: white;
-  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+  box-shadow: 0 6px 20px rgba(220, 53, 69, 0.35);
   border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-danger::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-danger:hover::before {
+  left: 100%;
 }
 
 .btn-danger:hover {
   background: linear-gradient(135deg, #c82333 0%, #bd2130 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(220, 53, 69, 0.5);
 }
 
 .card {
-  background: white;
-  border-radius: 12px;
-  padding: 25px;
-  margin-bottom: 20px;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
-  border: 1px solid #e9ecef;
-  transition: box-shadow 0.3s ease;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.1);
+  border: 1px solid rgba(0, 123, 255, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #764ba2);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.card:hover::before {
+  transform: scaleX(1);
 }
 
 .card:hover {
-  box-shadow: 0 5px 20px rgba(0, 123, 255, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0, 123, 255, 0.2);
+  border-color: rgba(0, 123, 255, 0.2);
 }
 
 .form-group {
@@ -140,7 +228,8 @@
 .form-group select:focus {
   outline: none;
   border-color: #007bff;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.15), 0 4px 12px rgba(0, 123, 255, 0.1);
+  transform: translateY(-1px);
 }
 
 .form-group textarea {

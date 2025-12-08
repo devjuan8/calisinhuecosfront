@@ -135,7 +135,7 @@ const Dashboard = () => {
     try {
       await reportsAPI.reject(reportId, result.value || '');
       loadDashboard();
-      showSuccess('Reporte rechazado exitosamente', 'Éxito');
+      showSuccess('Reporte rechazado y eliminado exitosamente', 'Éxito');
     } catch (error) {
       showError(error.response?.data?.message || 'Error al rechazar reporte', 'Error');
     }

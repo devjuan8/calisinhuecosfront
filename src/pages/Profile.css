@@ -1,7 +1,25 @@
 .profile-page {
   padding: 40px 20px;
   min-height: calc(100vh - 75px);
-  background: linear-gradient(to bottom, #f8f9fa, white);
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 50%, #ffffff 100%);
+  position: relative;
+}
+
+.profile-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #764ba2, #007bff);
+  background-size: 200% 100%;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
 .profile-page h1 {
@@ -12,6 +30,19 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  letter-spacing: -0.5px;
+  position: relative;
+}
+
+.profile-page h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #764ba2);
+  border-radius: 2px;
 }
 
 .profile-content {
@@ -23,11 +54,38 @@
 
 .profile-card,
 .profile-stats {
-  background: white;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
   padding: 35px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  border: 1px solid #e9ecef;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.1);
+  border: 1px solid rgba(0, 123, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.profile-card::before,
+.profile-stats::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #764ba2);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.profile-card:hover::before,
+.profile-stats:hover::before {
+  transform: scaleX(1);
+}
+
+.profile-card:hover,
+.profile-stats:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0, 123, 255, 0.15);
 }
 
 .profile-card h2,
@@ -68,9 +126,18 @@
 .stat-item {
   display: flex;
   justify-content: space-between;
-  padding: 15px;
-  background: #f8f9fa;
-  border-radius: 5px;
+  align-items: center;
+  padding: 18px 20px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 12px;
+  border-left: 4px solid #007bff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.15);
 }
 
 .profile-sections {
@@ -80,10 +147,29 @@
 }
 
 .profile-section {
-  background: white;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
   padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.1);
+  border: 1px solid rgba(0, 123, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.profile-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #764ba2);
+}
+
+.profile-section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0, 123, 255, 0.15);
 }
 
 .profile-section h2 {
@@ -100,12 +186,21 @@
 
 .report-item,
 .donation-item {
-  padding: 15px;
-  background: #f8f9fa;
-  border-radius: 5px;
+  padding: 18px 20px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-left: 4px solid #007bff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.report-item:hover,
+.donation-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.15);
 }
 
 .report-item {
