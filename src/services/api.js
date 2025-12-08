@@ -7,6 +7,7 @@ const api = axios.create({
   headers: {
     'Content-Type': 'application/json',
   },
+  timeout: 60000, // 60 segundos de timeout para peticiones grandes (como crear reportes con imágenes)
 });
 
 // Interceptor para agregar token a las peticiones
